@@ -1,0 +1,13 @@
+<div class="topbar">
+  <div class="topbar-name-row">
+    <h3>NOTESAPP</h3>
+    <mat-icon (click)="navigateToProfile()">account_circle</mat-icon>
+  </div>
+  <app-calendar-topbar></app-calendar-topbar>
+</div>
+<div class="content">
+  <app-notes-list></app-notes-list>
+</div>
+<button (click)="navigateToNoteForm()">
+  <mat-icon>add</mat-icon>
+</button>

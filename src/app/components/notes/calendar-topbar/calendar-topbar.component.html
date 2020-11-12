@@ -1,0 +1,5 @@
+<div class="dates-container">
+    <div *ngFor="let d of displayedDates" class="day" [ngClass]="{'current-day': compareDates(d)}" >
+        <span class="date" (click)="changeDate(d)" [innerHTML]="d | currentDate: 'dayname'"></span>
+    </div>
+</div>

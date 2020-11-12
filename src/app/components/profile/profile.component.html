@@ -1,0 +1,15 @@
+<ng-container [@switchSite]="isNavigated">
+  <app-topbar (navigationBackPressed)="navigateToNotesPage()"></app-topbar>
+  <div class="profile-container">
+    <h3>Profile</h3>
+    <mat-icon>account_circle</mat-icon>
+
+    <ng-container *ngFor="let p of profile | keyvalue">
+      <ng-container *ngIf="p.key !== 'id'">
+        <app-editable-label *ngIf="p.key !== 'password'" [labelKey]="p.key" [labelValue]="p.value"></app-editable-label>
+        <app-editable-label *ngIf="p.key === 'password'" [labelKey]="p.key" [labelValue]="p.value" [isValueHidden]="true"></app-editable-label>
+      </ng-container>
+    </ng-container>
+    <button class="delete-account" (click)="navigateToDeleteProfile()">Delete account</button>
+  </div>
+</ng-container>

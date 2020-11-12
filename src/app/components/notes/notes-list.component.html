@@ -1,0 +1,10 @@
+<ng-container *ngIf="notes.length > 0; else nothingToDisplay">
+  <ng-container *ngFor="let note of notes">
+      <app-note  class="note" [note]="note" (noteToDelete)="deleteNote($event)"></app-note>
+  </ng-container>
+</ng-container>
+
+<ng-template #nothingToDisplay>
+  <p>No notes to display.</p>
+</ng-template>
+

@@ -1,0 +1,11 @@
+<div class="background">
+  <h1 class="appname-header">NOTESAPP</h1>
+  <div [@routerAnimations]="prepareRoute(outlet)">
+    <router-outlet class="form-area" #outlet="outlet"></router-outlet>
+  </div>
+</div>
+<div class="bottom-area">
+  <span *ngIf="checkIfCurrentRouteEqual('/auth/login')" class="auth-action-link"><p>Don't have an account?</p><a (click)="navigateToRegister()">Register here.</a></span>
+  <span *ngIf="checkIfCurrentRouteEqual('/auth/register')" class="auth-action-link"><p>Already have an account?</p><a (click)="navigateToLogin()">Login here!</a></span>
+</div>
+

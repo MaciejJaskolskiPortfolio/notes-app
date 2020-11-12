@@ -1,0 +1,43 @@
+:host {
+  display: flex;
+  justify-content: center;
+  flex-direction: row ;
+  margin: 6px auto;
+  justify-content: space-between;
+  width: 80%;
+
+  &:first-child {
+    margin-top: 26px;
+  }
+
+  .labelName {
+    font-weight: bold;
+    width: 40%;
+    text-transform: capitalize;
+    white-space: pre-wrap;
+  }
+
+  .labelValue {
+    flex: 1;
+    text-align: left;
+    font-weight: 300;
+  }
+
+  mat-icon {
+    color: #79A7FF;
+    margin: auto 0;
+    cursor: pointer;
+  }
+
+  .cancel-edit {
+    color: #FFDADA;
+  }
+
+  .confirm-edit {
+    color: #529B51;
+  }
+
+  input {
+    font-family: inherit;
+  }
+}

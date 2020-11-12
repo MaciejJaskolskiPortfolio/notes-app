@@ -1,0 +1,55 @@
+:host {
+  margin: 5px auto;
+  color: black;
+
+  .dates-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin: 20px auto;
+    background: white;
+    padding: 4px 8px;
+    border-radius: 5px;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    width: 80%;
+    height: 30%;
+
+    .day {
+      flex: 1;
+      margin: 4px;
+      font-size: 23px;
+
+      &:hover {
+        color: lighten(black, 25%);
+      }
+    }
+
+    .date {
+      cursor: pointer;
+      font-size: 22px;
+      font-weight: 400;
+      line-height: 21px;
+      white-space: pre-line;
+    }
+
+    .current-day {
+      color: #79a7ff;
+      flex: 1;
+
+      &:hover {
+        color: lighten(#79a7ff, 10%);
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+
+  :host {
+    .dates-container {
+      width: 45%;
+    }
+  }
+}

@@ -1,0 +1,105 @@
+:host {
+
+  width: 100%;
+
+  .form-list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+
+    app-input, app-textarea {
+      margin: 15px auto 0;
+      width: 90%;
+    }
+
+    .icon-color-row {
+      width: 90%;
+      margin: 15px;
+      display: flex;
+      flex-wrap: nowrap;
+
+      .select-data {
+        position: absolute;
+        height: 24px;
+        width: 24px;
+        top: 20%;
+        left: 50%;
+        border-radius: 50%;
+      }
+
+      app-select {
+        width: 35%;
+
+        &:last-child {
+          margin-left: 15px;
+        }
+      }
+    }
+
+    .date-input {
+      margin: 15px auto 0;
+      position: relative;
+      display: flex;
+      width: 90%;
+      justify-content: center;
+
+      input {
+        height: 40px;
+        padding-left: 45px;
+        font-family: inherit;
+        font-size: 1.5em;
+        font-weight: 300;
+        outline: none;
+        box-sizing: border-box;
+        width: -moz-available;
+        width: -webkit-fill-available;
+        width: intrinsic;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border: 1px solid #79A7FF;
+      }
+
+      mat-datepicker-toggle {
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-size: 18px;
+        color: white;
+        line-height: 21px;
+        background: #79a7ff;
+      }
+    }
+  }
+
+  app-button {
+    width: 100%;
+    display: inline-flex;
+    margin: 50px auto;
+    text-align: center;
+    align-items: center ;
+    justify-content: center;
+  }
+
+  .error {
+    margin-top: 5px;
+    color: red;
+    font-size: 15px;
+  }
+
+}
+
+@media only screen and (min-width: 768px) {
+
+  .form-list {
+    width: 75%;
+    margin: 50px auto;
+
+    .icon-color-row {
+      app-select {
+        width: 20% !important;
+      }
+    }
+  }
+}

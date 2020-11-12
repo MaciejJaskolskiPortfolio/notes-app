@@ -1,0 +1,18 @@
+<div [@deleteNote]="onDeleteAnimation" class="shadow">
+  <div class="main-data-note" [ngStyle]="{'background': note.color}">
+    <mat-icon [inline]="true" class="icon-row">{{note.icon}}</mat-icon>
+    <h3 class="title">{{note.title}}</h3>
+    <mat-icon [inline]="true" class="icon-row operation-icons" (click)="editNote()">edit</mat-icon>
+    <mat-icon [inline]="true" class="icon-row operation-icons" (click)="deleteNote()">delete</mat-icon>
+  </div>
+  <div [@expandDescription] *ngIf="areDetailsDisplayed"  [ngStyle]="{'background': lightenColor(note.color, 0.1)}">
+    <p class="description">
+      {{note.description}}
+    </p>
+  </div>
+  <div class="expand-button" *ngIf="note.description && note.description.length > 0" (click)="showDetails()" [ngStyle]="{'background': lightenColor(note.color, 0.1)}">
+    <mat-icon *ngIf="!areDetailsDisplayed">expand_more</mat-icon>
+    <mat-icon *ngIf="areDetailsDisplayed">expand_less</mat-icon>
+  </div>
+
+</div>

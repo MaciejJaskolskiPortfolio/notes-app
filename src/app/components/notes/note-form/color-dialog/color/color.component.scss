@@ -1,0 +1,11 @@
+:host {
+  margin: 12px;
+
+  .color-circle {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+  }
+}

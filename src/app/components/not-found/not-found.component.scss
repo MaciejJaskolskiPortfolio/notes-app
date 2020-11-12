@@ -1,0 +1,28 @@
+:host {
+
+  height: 100%;
+  flex-direction: column;
+  display: flex;
+
+  h1 {
+    font-weight: 300;
+    text-align: center;
+    margin: 60% auto 15%;
+  }
+
+  button {
+    outline: none;
+    border-radius: 5px;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 24px;
+    padding: 5px;
+    font-family: inherit;
+    text-align: center;
+    width: 40%;
+    border: none;
+    cursor: pointer;
+    background: #e5e5e5;
+    margin: 0 auto;
+  }
+}

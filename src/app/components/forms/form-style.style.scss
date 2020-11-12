@@ -1,0 +1,105 @@
+:host {
+
+  button {
+    cursor: pointer;
+    font-family: inherit;
+    height: 34px;
+    width: 210px;
+    font-size: 1.5em;
+    font-weight: normal;
+    text-transform: capitalize;
+    background-color: #79A7FF;
+    color: white;
+    border: 1px solid #21468C;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+    &:disabled {
+      background: #e5e5e5;
+      color: #79A7FF;
+      border: 1px solid #79A7FF;
+      cursor: not-allowed;
+    }
+
+    &:focus {
+      box-shadow: 0px 0px 10px rgba(#377BFF, .25);
+    }
+  }
+
+  .form-icon {
+    position: relative;
+
+    input[type=text],
+    input[type=password] {
+      font-family: inherit;
+      padding-left: 45px;
+      font-size: 1.5em;
+      font-weight: 300;
+      outline: none;
+      box-sizing: border-box;
+      transition: .3s;
+      height: 40px;
+      border: 1px solid #79A7FF;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      width: -moz-available;
+      width: -webkit-fill-available;
+      width: intrinsic;
+      display: inline-block;
+
+      &:focus {
+        box-shadow: 0px 0px 10px rgba(#377BFF, .25);
+      }
+    }
+
+    textarea {
+      resize: none;
+      font-family: inherit;
+      padding: 45px 5px 0;
+      font-size: 1.5em;
+      font-weight: 300;
+      outline: none;
+      box-sizing: border-box;
+      transition: .3s;
+      height: 175px;
+      border: 1px solid #79A7FF;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      width: -moz-available;
+      width: -webkit-fill-available;
+      width: intrinsic;
+      display: inline-block;
+
+      &:focus {
+        box-shadow: 0px 0px 10px rgba(#377BFF, .25);
+      }
+    }
+
+    &.select-expand-icon {
+      &:before {
+        position: absolute;
+        right: 0;
+        top: 20%;
+        padding: 5px 3px;
+        content: "\25BC";
+        color: #79A7FF;
+      }
+    }
+
+    .icon-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 40px;
+      height: 40px;
+      background-color: #79A7FF;
+    }
+
+    mat-icon {
+      position: absolute;
+      left: 0;
+      top: 0;
+      font-size: 18px;
+      padding: 11px 9px;
+      color: white;
+    }
+  }
+}

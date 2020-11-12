@@ -1,0 +1,6 @@
+<div class="topbar">
+  <ng-container *ngIf="showBackButton">
+    <mat-icon class="arrow-back" (click)="navigateBackPressed()">arrow_back</mat-icon>
+  </ng-container>
+  <h3 [ngClass]="{ 'no-back-button': !showBackButton, 'with-back-button': showBackButton}">NOTESAPP</h3>
+</div>

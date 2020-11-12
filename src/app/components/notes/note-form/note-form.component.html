@@ -1,0 +1,29 @@
+<app-topbar (navigationBackPressed)="navigateToHome()"></app-topbar>
+<form [formGroup]="noteForm" class="form-list">
+
+  <app-input formControlName="title" ngDefaultControl [icon]="'title'" class="required" [value]="noteForm.get('title').value"></app-input>
+  <ng-container *ngIf="shouldDisplayError('title')">
+    <span class="error">Title is required and must have at least 3 characters.</span>
+  </ng-container>
+
+  <app-textarea [value]="noteForm.get('description').value" formControlName="description" ngDefaultControl [icon]="'note'"></app-textarea>
+
+  <div class="date-input">
+    <input formControlName="date" ngDefaultControl mat-input [matDatepicker]="picker" (click)="picker.open()"/>
+    <mat-datepicker-toggle [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker touchUi #picker></mat-datepicker>
+  </div>
+  <ng-container *ngIf="shouldDisplayError('date')">
+      <span class="error">Date is required.</span>
+  </ng-container>
+
+  <div class="icon-color-row">
+    <app-select formControlName="icon" ngDefaultControl [icon]="'insert_photo'" (click)="openIconDialog()" [text]="pickedIcon">
+      <mat-icon class="select-data">{{pickedIcon}}</mat-icon>
+    </app-select>
+    <app-select formControlName="color" ngDefaultControl [icon]="'palette'" (click)="openColorDialog()" [text]="pickedColor">
+      <div class="select-data" [ngStyle]="{'background-color': pickedColor}"></div>
+    </app-select>
+  </div>
+</form>
+<app-button [buttonText]="buttonText" (click)="createNote()"></app-button>

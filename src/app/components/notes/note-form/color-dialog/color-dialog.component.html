@@ -1,0 +1,9 @@
+<h1 class="title" mat-dialog-title>Pick a color</h1>
+<div mat-dialog-content class="color-table">
+  <ng-container *ngFor="let c of colorList">
+    <app-color [color]="c" (click)="pickColor(c)"></app-color>
+  </ng-container>
+</div>
+<!-- <div mat-dialog-actions>
+
+</div> -->

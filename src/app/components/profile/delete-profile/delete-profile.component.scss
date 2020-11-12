@@ -1,0 +1,45 @@
+:host {
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap:  nowrap;
+  height: 100%;
+
+  h1 {
+    font-size: 36px;
+    font-weight: 300;
+    line-height: 43px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin: 20% auto 25px;
+  }
+
+  .btn-row-delete-profile {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+    button {
+      outline: none;
+      border-radius: 5px;
+      font-weight: 300;
+      font-size: 36px;
+      line-height: 43px;
+      font-family: inherit;
+      text-align: center;
+      width: 40%;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn-delete {
+      background: #FFDADA;
+    }
+
+    .btn-cancel {
+      background: #e5e5e5;
+    }
+  }
+}

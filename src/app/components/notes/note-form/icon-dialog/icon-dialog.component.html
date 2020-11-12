@@ -1,0 +1,9 @@
+<h1 class="title" mat-dialog-title>Pick an icon</h1>
+<div mat-dialog-content class="color-table">
+  <ng-container *ngFor="let i of icons">
+    <mat-icon (click)="pickIcon(i)">{{i}}</mat-icon>
+  </ng-container>
+</div>
+<!-- <div mat-dialog-actions>
+
+</div> -->

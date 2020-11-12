@@ -1,0 +1,19 @@
+language: node_js
+node_js:
+  - "10"
+dist: trusty
+sudo: required
+before_install:
+  - npm install -g yarn
+  - yarn add @angular/cli@8.3
+script:
+  - ng test -- --no-progress --browsers=ChromeHeadless --watch=false
+  - ng build --prod --base-href https://maciejjaskolskiportfolio.github.io/notes-app/
+deploy:
+  provider: heroku
+  api_key:
+    secure: TVBmuPmc5yKAy3ha3q0CREK4NaiAz/bkzNzpf/7nqPLB2ut/kFwh7cbc6SqjxMAlY1J89LXVz4eSQM6fLX+1JQyMEeHbanDZFIVCd+VAf22NxMz+n4Dy2KOF+9/pWQO8oDRi0yGgFU/mV7iU+OYB9JZrIFmGRN3mW4p5eBZ/1gh0cGraPR0KNWPXDFIoGjA/rBrRfDNgk+dqlew/mhVSDoLQ1KKEjepm7VhKGzbLvuCXbqy50ctVAtQlj7oE4+7hRwF4/Fo5ISYhCAr2tbCcYgSHyrFPI6xeEgL6ksz+Vu3awj6zAEbw9ioEZx9y6NrGFwlBIxxUZ7AsDtOQdRcYQhwZghyK1C4JJT7EP9YoUjSB20/KZsSnlMtwWNiYZQYWjm+spOM0wEbN8+eMuamwZoUGvHeNrnQMpKCzJgpxZFKe4YVwI9xjX4kxtMhv5dyvnw6AdtdV8o+oCUl3+1CROgGQ99q0QuwWEewm5nWBr39casGnwIErXZ+kp6oybslT2utNTDokU0MKsQYmEWOktTKytuh3NokNJ7akSxoHnN0/SrF/ottaljKcReGav2nbvknI4TFYwhiRpZpbGQHIfgF42ciMCYzXXIzmpZ9dq1zBEICeuOAebogW6cQ1g9/16TqoZfM/P3oTDXJhMLPY4zF9B9TS3OLyVeyNYnZusHw=
+  app: notesapp-mj
+  on:
+    branch: master
+  skip_cleanup: true

@@ -1,0 +1,21 @@
+<p class="labelName">{{label}}</p>
+<ng-container *ngIf="!isValueHidden && !isEditionModeActive">
+  <p class="labelValue">{{labelValue}}</p>
+</ng-container>
+<ng-container *ngIf="isValueHidden && !isEditionModeActive">
+  <p class="labelValue">••••••••••••••••</p>
+</ng-container>
+<ng-container *ngIf="!isValueHidden && isEditionModeActive">
+  <input #editInput class="labelValue" value={{labelValue}} [(ngModel)]="input" />
+</ng-container>
+<ng-container *ngIf="isValueHidden && isEditionModeActive">
+  <input class="labelValue" type="password" [(ngModel)]="passwordInput">
+</ng-container>
+<ng-container *ngIf="!isEditionModeActive">
+  <mat-icon (click)="switchEditionMode()">edit</mat-icon>
+</ng-container>
+<ng-container *ngIf="isEditionModeActive">
+  <mat-icon class="cancel-edit" (click)="switchEditionMode()">clear</mat-icon>
+  <mat-icon class="confirm-edit" (click)="confirmEdit()">done</mat-icon>
+</ng-container>
+

@@ -1,0 +1,16 @@
+<h2>Register</h2>
+<form [formGroup]="registerGroup" class="input-container">
+  <app-input formControlName="email" ngDefaultControl [icon]="'mail'"></app-input>
+  <ng-container *ngIf="shouldDisplayError('email')">
+    <span class="error">Email must be correct and have at least 3 characters.</span>
+  </ng-container>
+  <app-input formControlName="password" ngDefaultControl [icon]="'vpn_key'" [type]="'password'"></app-input>
+  <ng-container *ngIf="shouldDisplayError('password')">
+    <span class="error">Password must have at least 8 characters.</span>
+  </ng-container>
+  <app-input formControlName="confirmPassword" ngDefaultControl [icon]="'vpn_key'" [type]="'password'"></app-input>
+  <ng-container *ngIf="shouldDisplayError('confirmPassword')">
+    <span class="error">Passwords are not identical.</span>
+  </ng-container>
+  <app-button [buttonText]="'Register'" (click)="register()"></app-button>
+</form>

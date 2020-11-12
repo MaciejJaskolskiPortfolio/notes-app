@@ -1,0 +1,55 @@
+:host {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  flex-grow: 1;
+  height: 100%;
+  overflow: hidden;
+
+  .appname-header {
+    font-size: 64px;
+    font-weight: normal;
+    color: white;
+    text-align: center;
+    margin: 69px auto;
+    line-height: 76px;
+  }
+
+  .background {
+    position: relative;
+    background: #377BFF;
+    flex: 60%;
+  }
+
+  .bottom-area {
+    flex: 30%;
+    position: relative;
+
+    .auth-action-link {
+      font-weight: 300;
+      font-size: 18px;
+      line-height: 22px;
+      display: flex;
+      justify-content: center;
+      position: absolute;
+      bottom: 5%;
+      text-align: center;
+      width: 100%;
+
+      a {
+        color: #79A7FF;
+        font-weight: 700;
+        margin: auto 10px;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .form-area {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: white;
+  }
+}

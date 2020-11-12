@@ -1,0 +1,58 @@
+:host {
+
+  .profile-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h3 {
+      font-weight: normal;
+      font-size: 32px;
+      line-height: 38px;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      margin: 15px auto;
+      justify-content: center;
+    }
+
+    mat-icon {
+      margin: 20px auto 50px;
+      font-size: 4.6em;
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      height: 70px;
+    }
+
+    .delete-account {
+      background-color: #377BFF;
+      border-radius: 6px;
+      font-size: 18px;
+      line-height: 21px;
+      color: white;
+      outline: none;
+      border: none;
+      height: 36px;
+      display: inline-flex;
+      align-self: flex-end;
+      margin: 30px auto 10px auto;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+      width: 50%;
+      cursor: pointer;
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+
+  :host {
+    .profile-container {
+      width: 65%;
+      margin: auto;
+    }
+  }
+}

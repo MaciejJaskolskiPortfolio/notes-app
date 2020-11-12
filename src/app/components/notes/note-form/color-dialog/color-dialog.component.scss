@@ -1,0 +1,17 @@
+:host {
+  width: 80%;
+
+  .title {
+    font-family: inherit;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 43px;
+    text-align: center;
+  }
+
+  .color-table {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
