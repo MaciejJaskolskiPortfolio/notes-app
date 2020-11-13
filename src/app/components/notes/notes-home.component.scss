@@ -42,7 +42,7 @@
   }
 
   button {
-    position: absolute;
+    position: fixed;
     bottom: 2%;
     right: 4%;
     width: 42px;
@@ -78,5 +78,11 @@
       width: 75%;
       margin: 15px auto;
     }
+  }
+}
+
+@media screen and (orientation: landscape) {
+  .topbar {
+    height: 50% !important;
   }
 }

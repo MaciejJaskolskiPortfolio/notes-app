@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { matchValuesValidator } from 'src/app/validators/matchValues.validator';
 
 @Component({
@@ -11,7 +12,7 @@ export class RegisterComponent implements OnInit {
 
   registerGroup: FormGroup;
 
-  constructor(private fb: FormBuilder) { }
+  constructor(private fb: FormBuilder, private router: Router) { }
 
   ngOnInit() {
     this.registerGroup = this.fb.group({
@@ -34,14 +35,14 @@ export class RegisterComponent implements OnInit {
     }
   }
 
-  private passwordsEqual(password: string, confirmPassword: string) {
-    return password === confirmPassword && password !== '' && confirmPassword !== '';
-  }
-
   private markControlsInvalid(form: FormGroup) {
     Object.keys(form.controls).forEach(c => {
       form.get(c).markAsDirty({ onlySelf: true });
     });
+  }
+
+  navigateToLogin() {
+    this.router.navigate(['auth/login']);
   }
 
 }

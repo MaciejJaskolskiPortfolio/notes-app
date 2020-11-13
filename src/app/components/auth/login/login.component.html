@@ -1,6 +1,10 @@
-<h2>Sign in</h2>
+<h2 [matTooltip]="'No auth available. Sign in redirects home instead.'">Sign in</h2>
 <div class="input-container">
   <app-input [icon]="'mail'"></app-input>
   <app-input [icon]="'vpn_key'" [type]="'password'"></app-input>
   <app-button (click)="navigateToHome()" [buttonText]="'Sign in'"></app-button>
 </div>
+<span class="auth-action-link">
+  <p>Don't have an account?</p><a (click)="navigateToRegister()">Register here.</a>
+</span>
+
