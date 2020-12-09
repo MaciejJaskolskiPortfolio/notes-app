@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/MaciejJaskolski/notes-app-test.svg?branch=master)](https://travis-ci.org/MaciejJaskolski/notes-app-test)
+[![Build Status](https://travis-ci.com/MaciejJaskolskiPortfolio/notes-app.svg?branch=master)](https://travis-ci.com/MaciejJaskolskiPortfolio/notes-app)
 
 # Notesapp
 
